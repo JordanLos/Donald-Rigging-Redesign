@@ -37,14 +37,14 @@
 		window.onload = function() {
   			//Animation for the contact-div only occuring beyond 800px
 	  		function contactAnimation() {
-				TweenLite.to("#contact-div", 1.5, {opacity:1, delay:1.5});
-				 TweenLite.from("#contact-div", 0.5, {marginTop:"-=5px", delay:1.5});
+				TweenLite.to("#contact-div", 1, {opacity:1, delay:.5});
+				TweenLite.from("#contact-div", 1, {marginTop:"-=5px", delay:0.5});
 	  		}
   			//Animations for all breakpoints
-			TweenLite.to("#logo", 1, {opacity:1});
-			TweenLite.from("#logo", 1, {top:"-=20px"});
-			TweenLite.to(".landing-anim", 1.5, {opacity:1, delay:1.5});
-			TweenLite.from(".landing-anim", 0.5, {marginTop:"-=5px", delay:1.5});
+			TweenLite.to("#logo", .5, {opacity:1});
+			TweenLite.from("#logo", .5, {top:"-=10px", ease: Power3.easeout});
+			TweenLite.to(".landing-anim", 1, {opacity:1, delay:0.5});
+			TweenLite.from(".landing-anim", 1, {marginTop:"-=5px", delay:0.5});
 			//Calls #contact-div animation beyond 800px. Since the margin creates the #contact-div movement, if the animation runs below 800px the position of the #contact-div will be incorrect when if the page is resized beyond 800px.
 			if (window.matchMedia("(min-width: 800px)").matches) {
         return contactAnimation();
@@ -286,10 +286,7 @@
     <div>Icons made by <a href="http://www.flaticon.com/authors/google" target="_blank" title="Google">Google</a> from <a href="http://www.flaticon.com" target="_blank" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
   </section>
   </div>
-  <script src="js/TweenLite.min.js" async></script> 
-  <script src="js/picturefill.min.js" async></script> 
-  <script src="js/CSSPlugin.min.js" async></script> 
-  <script src="js/animations.js" async></script> 
+  <script src="js/output.min.js" async></script> 
   <script src="js/fontfaceobserver.js"></script>
   <script>
     /*fontfaceobserver script for optimizing font delivery*/
